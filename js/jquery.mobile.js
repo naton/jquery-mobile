@@ -296,7 +296,7 @@
 		}
 		
 		// find the "to" page, either locally existing in the dom or by creating it through ajax
-		if ( to.length ) {
+		if ( to.length && type!="post") {
 			if( fileUrl ){
 				setBaseURL(fileUrl);
 			}	
