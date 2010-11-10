@@ -28,7 +28,7 @@
 	$cache 	  = true;
 	$write_combined = true;
 	$pullfromcache = false;
-	$theme = $_GET['theme'];
+	$theme = @$_GET['theme'];
 	$cachedir = dirname(__FILE__) . '/cache';
 	$combinedir = dirname(__FILE__) . '/combined';
 	$cssdir   = dirname(__FILE__) . '/themes/' . $theme;
@@ -74,6 +74,7 @@
 	
 		if (substr($path, 0, strlen($thisbase)) != $thisbase || !file_exists($path)) {
 			header ("HTTP/1.0 404 Not Found");
+			var_dump(1);
 			exit;
 		}
 		
