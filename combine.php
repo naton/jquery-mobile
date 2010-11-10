@@ -74,7 +74,6 @@
 	
 		if (substr($path, 0, strlen($thisbase)) != $thisbase || !file_exists($path)) {
 			header ("HTTP/1.0 404 Not Found");
-			var_dump(1);
 			exit;
 		}
 		
